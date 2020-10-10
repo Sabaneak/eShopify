@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// Images Import
 import phone from './Assets/phone_group.jpg';
 import laptop from './Assets/laptop.jpg';
 import cricket from './Assets/cricket.jpg';
@@ -11,7 +12,7 @@ var Coverflow = require('react-coverflow');
 
 const Slideshow = () => {
         return (
-            <div>
+            <div style={{marginBottom:'2%'}}>
                 <Coverflow
                         displayQuantityOfSide={5}
                         navigation={true}

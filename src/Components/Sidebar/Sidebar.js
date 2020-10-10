@@ -83,7 +83,7 @@ const Sidebar =() => {
                                 <FontAwesomeIcon icon={faBlenderPhone}/>
                             </NavIcon>
                             <NavText>
-                                Household Appliances
+                                Household
                             </NavText>
                             <NavItem eventKey="household/bathroom">
                                 <NavText>
@@ -107,7 +107,7 @@ const Sidebar =() => {
                                 <FontAwesomeIcon icon={faVolleyballBall}/>
                             </NavIcon>
                             <NavText>
-                                Sports Equipment
+                                Sports
                             </NavText>
                             <NavItem eventKey="sports/cricket">
                                 <NavText>
