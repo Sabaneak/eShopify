@@ -1,22 +1,35 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
 import './App.css';
 
-// Custom Component
-import Sidebar from '../Components/Sidebar/Sidebar';
-import Slideshow from '../Components/Slideshow/Slideshow';
-import Popular from '../Components/Popular/Popular'; 
-import Cart from '../Components/Cart/Cart';
+import {BrowserRouter, Route} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-        <p>Hello</p>
-        <Sidebar />
-        <Slideshow />
-        <Popular />
-        <Cart />
-    </div>
-  );
+// Custom Component
+import Landing from './Landing';
+import Viewlist from '../Components/Viewlist/Viewlist';
+
+class App extends Component {
+  render () {
+    return (
+      
+      <div className="App">
+        <p>Search Bar Here!</p>
+        
+        <BrowserRouter> 
+        
+          <Route path='/' exact render={(props) => <Landing /> } />
+          <Route path='/home' exact render={(props) => <Landing /> } />
+
+          {/* <Route path='/clothes' render={(props) => <Explore/> } />
+          <Route path='/electronics' render={(props) => <Explore/> } />
+          <Route path='/sports' render={(props) => <Explore/> } />
+          <Route path='/household' render={(props) => <Explore/> } /> */}
+          <Route path='/viewall' render={(props) => <Viewlist/> } />
+        
+        </BrowserRouter>
+
+      </div>
+      );
+    }
 }
 
 export default App;

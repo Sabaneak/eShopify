@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 // Custom Css
 import './Cart.css';
 
+// Custom Component Import
+import Popular from '../Popular/Popular';
+
 // FontAwesome import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 
@@ -11,8 +14,11 @@ import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
 class Cart extends Component {
-    state = {
-        cartIcon: false        
+    constructor(props) {
+        super(props);
+        this.state = {
+            cartIcon: false
+        }
     }
 
     handleClick = (e) => {
