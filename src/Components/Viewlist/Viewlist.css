@@ -1,0 +1,11 @@
+.clickButton{
+    width: "100px";
+    height: "40px";
+    background-color: "#DB3D44";
+    float: "right";
+    border:"None"
+}
+
+.bigGrid{
+    padding-left: 65px;
+}

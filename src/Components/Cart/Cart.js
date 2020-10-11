@@ -11,36 +11,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Icons
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
 class Cart extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            cartIcon: false
-        }
-    }
-
-    handleClick = (e) => {
-        this.setState({
-            cartIcon: !this.state.cartIcon 
-        })
     }
 
     render() {
         return (
             <div>
-            
-            {this.state.cartIcon?
-                <button className="cartButton" onClick={this.handleClick}>
-                    <FontAwesomeIcon className="iconStyle" icon={faShoppingCart} />
+                <button className="cartButton" onClick={this.props.open}>
+                        <FontAwesomeIcon className="iconStyle" icon={faShoppingCart} />
+                        <span style={{color:"white", padding:"10px",fontSize:"20px"}}>{this.props.count}</span>
                 </button>           
-            :
-                <button className="cartButton" onClick={this.handleClick}>
-                    <FontAwesomeIcon className="iconStyle" icon={faArrowLeft} />
-                </button>           
-            }
-
             </div>
         )
     }
