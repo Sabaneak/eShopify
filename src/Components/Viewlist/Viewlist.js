@@ -48,7 +48,7 @@ export default class Viewlist extends Component {
                     <span className="cartSpan">{this.props.count}</span>
             </button>           
             
-            <h1 className="header">Top Picks for you!</h1>
+            <h1 className="header">Collection</h1>
                 <Grid 
                 style={{paddingLeft:"65px"}}
                 container 
@@ -98,15 +98,13 @@ export default class Viewlist extends Component {
                         height: 400,
                         backgroundColor: 'grey',
                         border: '2px solid #000',
-                        // boxShadow: 'black',
                         top: '20%',
                         left:'35%'
-                        // padding: theme.spacing(2, 4, 3),
                     }}>
                         <h2 id="simple-modal-title">Receipt</h2>
                             {this.props.items.filter((item) => (item.counter > 0)).map((elem) => (
                                 <p id="simple-modal-description">
-                                    {elem.counter}x {elem.name}
+                                    {elem.counter}x {elem.name} ----------- ₹{elem.price * elem.counter}
                                 </p>
                             ))}
                         

@@ -93,6 +93,7 @@ export default class Clothes extends Component {
                 >
                     <div style={{
                         position: 'absolute',
+                        textAlign: 'center',
                         width: 400,
                         height: 400,
                         backgroundColor: 'grey',
@@ -105,7 +106,7 @@ export default class Clothes extends Component {
                         <h2 id="simple-modal-title">Receipt</h2>
                             {this.props.items.filter((item) => (item.counter > 0)).map((elem) => (
                                 <p id="simple-modal-description">
-                                    {elem.counter}x {elem.name}
+                                {elem.counter}x {elem.name} ----------- ₹{elem.price * elem.counter}
                                 </p>
                             ))}
                         
