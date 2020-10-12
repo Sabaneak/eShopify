@@ -63,7 +63,7 @@ export default class Sports extends Component {
                                     <div className="flipCard" >
                                         <div className="flipCardInner">
                                             <div className="flipCardFront">
-                                                <img src={popular.image} alt="brand" style={{ width:"150px",height:"250px", objectFit:"contain",borderRadius: '20px' }} />
+                                                <img src={popular.image} alt="brand" style={{ width:"200px",height:"250px", objectFit:"contain", borderRadius: '20px' }} />
                                             </div>
                                             
                                             <div className="flipCardBack">
@@ -93,14 +93,13 @@ export default class Sports extends Component {
                 >
                     <div style={{
                         position: 'absolute',
+                        textAlign: 'center',
                         width: 400,
                         height: 400,
                         backgroundColor: 'grey',
                         border: '2px solid #000',
-                        // boxShadow: 'black',
                         top: '20%',
-                        left:'35%'
-                        // padding: theme.spacing(2, 4, 3),
+                        left:'35%',
                     }}>
                         <h2 id="simple-modal-title">Receipt</h2>
                             {this.props.items.filter((item) => (item.counter > 0)).map((elem) => (

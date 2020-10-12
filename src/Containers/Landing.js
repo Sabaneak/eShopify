@@ -31,10 +31,11 @@ class Landing extends Component {
     render() {
         return (
             <>
+                <Cart count={this.props.count} add={this.props.add} minus={this.props.minus} open={this.handleOpen}/>
                 <Sidebar />
                 <Slideshow />
                 <Popular items={this.props.items} count={this.props.count} add={this.props.add} minus={this.props.minus} open={this.state.open} close={this.handleClose}/>
-                <Cart count={this.props.count} add={this.props.add} minus={this.props.minus} open={this.handleOpen}/>
+                
             </>
         )
     }

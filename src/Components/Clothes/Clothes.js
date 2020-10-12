@@ -63,7 +63,7 @@ export default class Clothes extends Component {
                                     <div className="flipCard" >
                                         <div className="flipCardInner">
                                             <div className="flipCardFront">
-                                                <img src={popular.image} alt="brand" style={{ width:"150px",height:"250px", objectFit:"contain",borderRadius: '20px' }} />
+                                                <img src={popular.image} alt="brand" style={{ width:"200px",height:"250px", objectFit:"contain",borderRadius: '20px' }} />
                                             </div>
                                             
                                             <div className="flipCardBack">

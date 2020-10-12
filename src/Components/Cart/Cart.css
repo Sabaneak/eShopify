@@ -1,9 +1,10 @@
 .cartButton {
+    position: relative;
     width: 100px;
     height: 40px;
     background-color: #DB3D44;
     float: right;
-    margin-top: -28%; 
+    /* margin-top: -28%;  */
     border: None;
 }
 

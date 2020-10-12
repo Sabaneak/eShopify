@@ -5,12 +5,14 @@
 
 .flipCard {
     background-color: salmon;
-    width: 150px;
+    width: 200px;
     height: 250px;
-    border: 1px solid #f1f1f1;
+    border: 1px solid magenta;
     perspective: 1000px;
     display: inline-block;
     border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.5);
+    margin: 5%;
   }
 
 .flipCard::after {
@@ -120,10 +122,10 @@
   margin-bottom: 1px;
 }
 
-.picture{
-  width:"1500px";
+.pictureSpecs{
+  width:"150px";
   height:"250px";
-  object-fit: "cover";
+  object-fit:"contain";
   border-radius: '20px';
 }
 

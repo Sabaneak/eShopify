@@ -43,11 +43,11 @@ class Popular extends Component {
                 >
                         {this.props.items.map((popular) => {
                         return (
-                            <Grid item xs={2}>
+                            <Grid item xs={3}>
                                 <div className="flipCard">
                                     <div className="flipCardInner">
                                         <div className="flipCardFront">
-                                            <img src={popular.image} alt="brand" style={{ width:"150px",height:"250px", objectFit:"contain", borderRadius: '20px' }} />
+                                            <img className="pictureSpecs" src={popular.image} alt="brand" style={{ width:"200px",height:"250px", objectFit:"contain", borderRadius: '20px', border: '2px black solid' }} />
                                         </div>
                                         
                                         <div className="flipCardBack">

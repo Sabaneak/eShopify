@@ -45,7 +45,7 @@ export default class Viewlist extends Component {
 
             <button style={{width: "100px", height: "40px", backgroundColor: "#DB3D44", float: "right",border:"None"}} onClick={this.handleOpen}>
                     <FontAwesomeIcon className="iconStyle" icon={faShoppingCart} />
-                    <span className="cardSpan">{this.props.count}</span>
+                    <span className="cartSpan">{this.props.count}</span>
             </button>           
             
             <h1 className="header">Top Picks for you!</h1>
@@ -63,7 +63,7 @@ export default class Viewlist extends Component {
                                     <div className="flipCard" >
                                         <div className="flipCardInner">
                                             <div className="flipCardFront">
-                                                <img src={popular.image} alt="brand" style={{ width:"150px",height:"250px", objectFit:"contain",borderRadius: '20px' }} />
+                                                <img src={popular.image} alt="brand" style={{ width:"200px",height:"250px", objectFit:"contain",borderRadius: '20px' }} />
                                             </div>
                                             
                                             <div className="flipCardBack">
@@ -93,6 +93,7 @@ export default class Viewlist extends Component {
                 >
                     <div style={{
                         position: 'absolute',
+                        textAlign: 'center',
                         width: 400,
                         height: 400,
                         backgroundColor: 'grey',
@@ -117,7 +118,7 @@ export default class Viewlist extends Component {
                             borderRight: "#fff",
                             borderBottom: "#fff",
                             fontSize: "13px",
-                            /* font-family: 'Montserrat', sans-serif, */
+                            
                             width: "180px",
                             height: "40px",
                             margin: "0.05%",

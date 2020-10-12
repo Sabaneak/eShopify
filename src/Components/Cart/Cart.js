@@ -19,7 +19,7 @@ class Cart extends Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <button className="cartButton" onClick={this.props.open}>
                         <FontAwesomeIcon className="iconStyle" icon={faShoppingCart} />
                         <span style={{color:"white", padding:"10px",fontSize:"20px"}}>{this.props.count}</span>
