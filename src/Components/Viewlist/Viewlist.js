@@ -59,7 +59,7 @@ export default class Viewlist extends Component {
                 >       
                         {this.props.items.map( (popular)=> {
                         return (
-                            <Grid item xs={12}>    
+                            <Grid item lg={3} md={6} xs={12}>    
                                     <div className="flipCard" >
                                         <div className="flipCardInner">
                                             <div className="flipCardFront">
