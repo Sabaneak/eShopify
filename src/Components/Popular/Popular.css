@@ -4,7 +4,7 @@
 }
 
 .flipCard {
-    background-color: transparent;
+    background-color: salmon;
     width: 150px;
     height: 250px;
     border: 1px solid #f1f1f1;
@@ -109,6 +109,46 @@
   border-bottom: "#fff";
   font-size: "13px";
   /* font-family: 'Montserrat', sans-serif, */
+  width: "180px";
+  height: "40px";
+  margin: "0.05%";
+  box-shadow: "0 10px 10px 0 rgba(0,0,0,0.05), 0 10px 15px 0 rgba(0,0,0,0.10)";
+  outline: "none";
+}
+
+.title{
+  margin-bottom: 1px;
+}
+
+.picture{
+  width:"1500px";
+  height:"250px";
+  object-fit: "cover";
+  border-radius: '20px';
+}
+
+.add-minus-button{
+  margin-top: 8%;
+  margin-right: 10%;
+  border: 1px black solid;
+}
+
+.cart-layout{
+  position: 'absolute';
+  width: 400;
+  height: 400;
+  background-color: 'grey';
+  border: '2px solid #000';
+  box-shadow: 'black';
+  top: '20%';
+  left:'35%';
+}
+
+.cart-checkout{
+  background-color:"#DB3D44";
+  color: "white";
+  border: "#fff";
+  font-size: "13px";
   width: "180px";
   height: "40px";
   margin: "0.05%";

@@ -9,6 +9,7 @@ import SideBar from '../Sidebar/Sidebar';
 // Import Css
 import '../Popular/Popular.css';
 
+
 // FontAwesome import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 
@@ -16,13 +17,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {faMinus} from "@fortawesome/free-solid-svg-icons";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import { EmojiObjects } from '@material-ui/icons';
 
 export default class Viewlist extends Component {
     constructor(props){
         super(props);
             this.state = {
-                open : false
+                open : false,
             }
         }
 
@@ -39,18 +39,16 @@ export default class Viewlist extends Component {
     };
 
     render() {
-        let res = this.props.items.filter(x => Object.values(x)[4] === 'clothes');
-        console.log(res);
         return (
             <>
             <SideBar />       
 
             <button style={{width: "100px", height: "40px", backgroundColor: "#DB3D44", float: "right",border:"None"}} onClick={this.handleOpen}>
                     <FontAwesomeIcon className="iconStyle" icon={faShoppingCart} />
-                    <span style={{color:"white", padding:"10px",fontSize:"20px"}}>{this.props.count}</span>
+                    <span className="cardSpan">{this.props.count}</span>
             </button>           
             
-            <h1 style={{marginBottom:'2%', marginLeft:"8%"}}>Top Picks for you!</h1>
+            <h1 className="header">Top Picks for you!</h1>
                 <Grid 
                 style={{paddingLeft:"65px"}}
                 container 
@@ -61,7 +59,7 @@ export default class Viewlist extends Component {
                 >       
                         {this.props.items.map( (popular)=> {
                         return (
-                            <Grid item xs={2}>    
+                            <Grid item xs={3}>    
                                     <div className="flipCard" >
                                         <div className="flipCardInner">
                                             <div className="flipCardFront">

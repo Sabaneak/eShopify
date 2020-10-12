@@ -6,7 +6,7 @@ import Sidebar from '../Components/Sidebar/Sidebar';
 import Slideshow from '../Components/Slideshow/Slideshow';
 import Popular from '../Components/Popular/Popular'; 
 import Cart from '../Components/Cart/Cart';
-import Clothes from '../Components/Clothes/Clothes';
+
 
 class Landing extends Component {
     constructor(props) {

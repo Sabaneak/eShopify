@@ -14,6 +14,21 @@ import shoes from './Assets/nike.jpg';
 import ball from './Assets/football.jpg';
 import condom from './Assets/durex.jpg';
 import washing from './Assets/lg.jpg';
+
+import cricket from './Assets/cricket.jpg';
+import shirts from './Assets/shirts.jpg';
+import sofa from './Assets/sofa.jpg';
+import skirts from './Assets/skirts.jpg';
+import tv from './Assets/tv.jpg';
+
+import bed from './Assets/bed.jpg';
+import kitchen from './Assets/kitchen.jpg';
+import laptop from './Assets/laptop.jpg';
+import shades from './Assets/shades.jpg';
+import basketball from './Assets/basketball.jpg';
+
+
+//Routes
 import Clothes from '../Components/Clothes/Clothes';
 import Electronics from '../Components/Electronics/Electronics';
 import Household from '../Components/Household/Household';
@@ -24,17 +39,23 @@ class App extends Component {
     super(props);
     this.state = {
       items: [
-            {id:2, type:"Clothes", name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
-            {id:3, type:"Sports",name:"Football", brand:"Nivia", price:"₹800", rating:4.1, image:ball, counter:0},
-            {id:4, type:"Household",name:"Condom", brand:"Durex", price:"₹2500", rating:3.8, image:condom, counter:0},
-            {id:5, type:"Electronics",name:"Washer", brand:"LG", price:"₹1000", rating:3.4, image:washing, counter:0},
-            {id:6, type:"Electronics",name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
-            {id:7, type:"Clothes",name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
-            {id:8, type:"Sports",name:"Football", brand:"Nivia", price:"₹800", rating:4.1, image:ball, counter:0},
-            {id:9, type:"Household",name:"Condom", brand:"Durex", price:"₹2500", rating:3.8, image:condom, counter:0},
-            {id:10, type:"Electronics",name:"Washer", brand:"LG", price:"₹1000", rating:3.4, image:washing, counter:0},
-            {id:11, type:"Electronics",name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
-            {id:12, type:"Clothes",name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
+            {id:1, type:"Electronics",name:"Watch", brand:"Rolex", price:"₹1000", rating:4.9, image:watch, counter:0},
+            {id:2, type:"Clothes", name:"Shoes", brand:"Nike", price:"₹1000", rating:4.8, image:shoes, counter:0},
+            {id:3, type:"Sports",name:"Football", brand:"Nivia", price:"₹800", rating:4.7, image:ball, counter:0},
+            {id:4, type:"Household",name:"Condom", brand:"Durex", price:"₹2500", rating:4.6, image:condom, counter:0},
+            {id:5, type:"Electronics",name:"Washer", brand:"LG", price:"₹1000", rating:4.4, image:washing, counter:0},
+            
+            {id:6, type:"Sports",name:"Cricket", brand:"SS", price:"₹1000", rating:4.2, image:cricket, counter:0},
+            {id:7, type:"Clothes",name:"Shirts", brand:"Polo", price:"₹800", rating:4.1, image:shirts, counter:0},
+            {id:8, type:"Household",name:"Sofa", brand:"IKEA", price:"₹2500", rating:3.9, image:sofa, counter:0},
+            {id:9, type:"Clothes",name:"Skirts", brand:"LG", price:"₹1000", rating:3.6, image:skirts, counter:0},
+            {id:10, type:"Electronics",name:"TV", brand:"Panasonic", price:"₹1000", rating:3.5, image:tv, counter:0},
+            
+            {id:11, type:"Household",name:"Bed", brand:"Comfy", price:"₹1000", rating:3.3, image:bed, counter:0},
+            {id:12, type:"Household",name:"Kitchen", brand:"Silverware", price:"₹1000", rating:3.2, image:kitchen, counter:0},
+            {id:13, type:"Electronics",name:"Laptop", brand:"msi", price:"₹1000", rating:3.1, image:laptop, counter:0},
+            {id:14, type:"Clothes",name:"Shades", brand:"Raymond", price:"₹1000", rating:2.9, image:shades, counter:0},
+            {id:15, type:"Sports",name:"Basketball", brand:"NBA", price:"₹1000", rating:2.7, image:basketball, counter:0},
       ],
       count : 0,
     }
@@ -71,15 +92,7 @@ class App extends Component {
     return(
       
       <div className="App">
-        <SearchBar
-        style = {{
-          width : "50%",
-          marginTop: "20px",
-          marginBottom: "20px",
-          marginLeft:"25%"
-
-        }}
-      />
+        <SearchBar className="searchBar"/>
         
         <BrowserRouter> 
         
@@ -90,6 +103,7 @@ class App extends Component {
           <Route path='/electronics' render={(props) => <Electronics items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
           <Route path='/household' render={(props) => <Household items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
           <Route path='/sports' render={(props) => <Sports items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } /> 
+          
           <Route path='/viewall' render={(props) => <Viewlist items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
         
         </BrowserRouter>

@@ -9,3 +9,14 @@
 .bigGrid{
     padding-left: 65px;
 }
+
+.header{
+    margin-top: 2%;
+    margin-bottom: 8%;
+}
+
+.cartSpan{
+    color:"white";
+    padding:"10px";
+    font-size:"20px";
+}

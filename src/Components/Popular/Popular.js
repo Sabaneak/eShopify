@@ -41,7 +41,7 @@ class Popular extends Component {
                 alignItems="center" 
                 spacing={1}
                 >
-                        {this.props.items.slice(0,5).map((popular) => {
+                        {this.props.items.map((popular) => {
                         return (
                             <Grid item xs={2}>
                                 <div className="flipCard">
