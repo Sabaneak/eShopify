@@ -43,7 +43,7 @@ class Popular extends Component {
                 >
                         {this.props.items.slice(0,5).map((popular) => {
                         return (
-                            <Grid item xs={2}>
+                            <Grid item xs={12}>
                                 <div className="flipCard">
                                     <div className="flipCardInner">
                                         <div className="flipCardFront">

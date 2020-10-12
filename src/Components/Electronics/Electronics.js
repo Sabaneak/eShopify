@@ -59,7 +59,7 @@ export default class Electronics extends Component {
                 >
                         {this.state.items.map( (popular)=> {
                         return (
-                            <Grid item xs={2}>    
+                            <Grid item xs={12}>    
                                     <div className="flipCard" >
                                         <div className="flipCardInner">
                                             <div className="flipCardFront">
