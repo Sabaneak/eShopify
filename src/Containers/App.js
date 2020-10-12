@@ -14,24 +14,27 @@ import shoes from './Assets/nike.jpg';
 import ball from './Assets/football.jpg';
 import condom from './Assets/durex.jpg';
 import washing from './Assets/lg.jpg';
+import Clothes from '../Components/Clothes/Clothes';
+import Electronics from '../Components/Electronics/Electronics';
+import Household from '../Components/Household/Household';
+import Sports from '../Components/Sports/Sports';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       items: [
-            {id:1, name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
-            {id:2, name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
-            {id:3, name:"Football", brand:"Nivia", price:"₹800", rating:4.1, image:ball, counter:0},
-            {id:4, name:"Condom", brand:"Durex", price:"₹2500", rating:3.8, image:condom, counter:0},
-            {id:5, name:"Washer", brand:"LG", price:"₹1000", rating:3.4, image:washing, counter:0},
-            {id:6, name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
-            {id:7, name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
-            {id:8, name:"Football", brand:"Nivia", price:"₹800", rating:4.1, image:ball, counter:0},
-            {id:9, name:"Condom", brand:"Durex", price:"₹2500", rating:3.8, image:condom, counter:0},
-            {id:10, name:"Washer", brand:"LG", price:"₹1000", rating:3.4, image:washing, counter:0},
-            {id:11, name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
-            {id:12, name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
+            {id:2, type:"Clothes", name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
+            {id:3, type:"Sports",name:"Football", brand:"Nivia", price:"₹800", rating:4.1, image:ball, counter:0},
+            {id:4, type:"Household",name:"Condom", brand:"Durex", price:"₹2500", rating:3.8, image:condom, counter:0},
+            {id:5, type:"Electronics",name:"Washer", brand:"LG", price:"₹1000", rating:3.4, image:washing, counter:0},
+            {id:6, type:"Electronics",name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
+            {id:7, type:"Clothes",name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
+            {id:8, type:"Sports",name:"Football", brand:"Nivia", price:"₹800", rating:4.1, image:ball, counter:0},
+            {id:9, type:"Household",name:"Condom", brand:"Durex", price:"₹2500", rating:3.8, image:condom, counter:0},
+            {id:10, type:"Electronics",name:"Washer", brand:"LG", price:"₹1000", rating:3.4, image:washing, counter:0},
+            {id:11, type:"Electronics",name:"Watch", brand:"Rolex", price:"₹1000", rating:4.7, image:watch, counter:0},
+            {id:12, type:"Clothes",name:"Shoes", brand:"Nike", price:"₹1000", rating:4.6, image:shoes, counter:0},
       ],
       count : 0,
     }
@@ -83,10 +86,10 @@ class App extends Component {
           <Route path='/' exact render={(props) => <Landing items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
           <Route path='/home' render={(props) => <Landing items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
 
-          {/* <Route path='/clothes' render={(props) => <Explore/> } />
-          <Route path='/electronics' render={(props) => <Explore/> } />
-          <Route path='/sports' render={(props) => <Explore/> } />
-          <Route path='/household' render={(props) => <Explore/> } /> */}
+          <Route path='/clothes' render={(props) => <Clothes items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
+          <Route path='/electronics' render={(props) => <Electronics items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
+          <Route path='/household' render={(props) => <Household items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
+          <Route path='/sports' render={(props) => <Sports items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } /> 
           <Route path='/viewall' render={(props) => <Viewlist items={this.state.items} count={this.state.count} add={this.handleAdd} minus={this.handleMinus}/> } />
         
         </BrowserRouter>

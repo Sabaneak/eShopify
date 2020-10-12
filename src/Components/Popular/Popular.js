@@ -29,8 +29,7 @@ class Popular extends Component {
     }
      
     render() {
-
-        console.log("State",this.state);
+        console.log(this.state.items);
         return (
             <>
             <Sidebar />

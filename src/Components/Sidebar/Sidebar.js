@@ -4,6 +4,9 @@ import React from 'react';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
+//NPM Imports
+import {Link} from 'react-router-dom';
+
 // FontAwesome import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 
@@ -23,19 +26,27 @@ const Sidebar =() => {
         
                         <NavItem eventKey="home">
                             <NavIcon>
-                                <FontAwesomeIcon icon={faHome}/>                               
+                                <Link to='/home'>
+                                    <FontAwesomeIcon icon={faHome}/>
+                                </Link>
                             </NavIcon>
                             <NavText>
-                                Home
+                                <Link to='/home'>
+                                    Home
+                                </Link>
                             </NavText>
                         </NavItem>
         
                         <NavItem eventKey="clothes">
                             <NavIcon>
-                                <FontAwesomeIcon icon={faTshirt}/>
+                                <Link to='/clothes'>
+                                    <FontAwesomeIcon icon={faTshirt}/>
+                                </Link>
                             </NavIcon>
                             <NavText>
-                                Clothes
+                                <Link to='/clothes'>
+                                    Clothes
+                                </Link>
                             </NavText>
                             <NavItem eventKey="clothes/men">
                                 <NavText>
@@ -56,10 +67,14 @@ const Sidebar =() => {
 
                         <NavItem eventKey="electronics">
                             <NavIcon>
+                                <Link to="/electronics">
                                 <FontAwesomeIcon icon={faMobileAlt}/>
+                                </Link>
                             </NavIcon>
                             <NavText>
-                                Electronics
+                                <Link to='/electronics'>
+                                    Electronics
+                                </Link>
                             </NavText>
                             <NavItem eventKey="electronics/mobile">
                                 <NavText>
@@ -80,10 +95,14 @@ const Sidebar =() => {
 
                         <NavItem eventKey="household">
                             <NavIcon>
-                                <FontAwesomeIcon icon={faBlenderPhone}/>
+                                <Link to='/household'>
+                                    <FontAwesomeIcon icon={faBlenderPhone}/>
+                                </Link>
                             </NavIcon>
                             <NavText>
-                                Household
+                                <Link to='/household'>
+                                    Household
+                                </Link>
                             </NavText>
                             <NavItem eventKey="household/bathroom">
                                 <NavText>
@@ -104,10 +123,14 @@ const Sidebar =() => {
 
                         <NavItem eventKey="sports">
                             <NavIcon>
-                                <FontAwesomeIcon icon={faVolleyballBall}/>
+                                <Link to='/sports'>
+                                    <FontAwesomeIcon icon={faVolleyballBall}/>
+                                </Link>
                             </NavIcon>
                             <NavText>
-                                Sports
+                                <Link to='/sports'>
+                                    Sports
+                                </Link>
                             </NavText>
                             <NavItem eventKey="sports/cricket">
                                 <NavText>

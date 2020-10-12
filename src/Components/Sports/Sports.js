@@ -16,13 +16,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPlus} from "@fortawesome/free-solid-svg-icons";
 import {faMinus} from "@fortawesome/free-solid-svg-icons";
 import {faShoppingCart} from "@fortawesome/free-solid-svg-icons";
-import { EmojiObjects } from '@material-ui/icons';
 
-export default class Viewlist extends Component {
+export default class Sports extends Component {
     constructor(props){
         super(props);
             this.state = {
-                open : false
+                open : false,
+                items: this.props.items.filter(x => x.type==="Sports"),
             }
         }
 
@@ -39,8 +39,6 @@ export default class Viewlist extends Component {
     };
 
     render() {
-        let res = this.props.items.filter(x => Object.values(x)[4] === 'clothes');
-        console.log(res);
         return (
             <>
             <SideBar />       
@@ -50,7 +48,7 @@ export default class Viewlist extends Component {
                     <span style={{color:"white", padding:"10px",fontSize:"20px"}}>{this.props.count}</span>
             </button>           
             
-            <h1 style={{marginBottom:'2%', marginLeft:"8%"}}>Top Picks for you!</h1>
+            <h1 style={{marginBottom:'2%', marginLeft:"8%"}}>Sports</h1>
                 <Grid 
                 style={{paddingLeft:"65px"}}
                 container 
@@ -58,8 +56,8 @@ export default class Viewlist extends Component {
                 justify="center"
                 alignItems="center" 
                 spacing={2}
-                >       
-                        {this.props.items.map( (popular)=> {
+                >
+                        {this.state.items.map( (popular)=> {
                         return (
                             <Grid item xs={2}>    
                                     <div className="flipCard" >
